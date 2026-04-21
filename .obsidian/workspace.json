@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 4.md",
+                "file": "Week 5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 4"
+              "title": "Week 5"
             }
           }
         ]
@@ -168,13 +168,14 @@
   },
   "active": "27f4a8c12016b7ac",
   "lastOpenFiles": [
+    "Machine Learning Techniques.md",
+    "Week 5.md",
+    "Week 4.md",
     "Week 3.md",
     "Week 1.md",
     "Week 2.md",
-    "Week 4.md",
     "README.md",
     "Untitled.canvas",
-    "2025-10-25.md",
-    "Machine Learning Techniques.md"
+    "2025-10-25.md"
   ]
 }
