@@ -11,16 +11,16 @@
 ### 2. REGULARIZATION IDEA
 #### Modify Objective
 - Add penalty term:
-  min Σ (w<sup>T</sup>xᵢ − yᵢ)² + λ ||w||²
+  min Σ (w<sup>T</sup>xᵢ−yᵢ)² + λ||w||²
 #### λ (lambda)
 - Controls strength of regularization
 ---
 ### 3. RIDGE REGRESSION (L2)
 #### Objective
-- min Σ (w<sup>T</sup>xᵢ − yᵢ)² + λ ||w||²
+- min Σ (w<sup>T</sup>xᵢ−yᵢ)² + λ||w||²
 #### Equivalent Form (Page 1)
-- min Σ (w<sup>T</sup>xᵢ − yᵢ)²  
-  subject to ||w||² ≤ θ
+- min Σ (w<sup>T</sup>xᵢ−yᵢ)²  
+  subject to ||w||²≤θ
 #### Insight
 - Penalty ↔ constraint equivalence
 ---
@@ -42,9 +42,9 @@
 ---
 ### 6. L1 REGULARIZATION (LASSO)
 #### Objective
-- min Σ (w<sup>T</sup>xᵢ − yᵢ)² + λ ||w||₁
+- min Σ(w<sup>T</sup>xᵢ − yᵢ)²+λ||w||₁
 #### L1 Norm
-- ||w||₁ = Σ |wᵢ|
+- ||w||₁=Σ|wᵢ|
 ---
 ### 7. GEOMETRIC DIFFERENCE
 #### L2 (Ridge)
@@ -72,7 +72,7 @@
 ### 10. SUB-GRADIENT
 #### Definition (Page 4)
 - g is subgradient if:
-  f(z) ≥ f(x) + g<sup>T</sup>(z − x)
+  f(z)≥f(x)+g<sup>T</sup>(z − x)
 #### Use
 - For non-differentiable functions (like |x|)
 ---
@@ -86,13 +86,13 @@
 ---
 ### 12. ANALYSIS OF MLE
 #### Result (Page 1)
-- E[||ŵ<sub>ML</sub> − w||²] = σ² trace((X<sup>T</sup>X)<sup>−1</sup>)
+- E[||ŵ<sub>ML</sub>−w||²] = σ² trace((X<sup>T</sup>X)<sup>−1</sup>)
 #### Insight
 - Large variance when X<sup>T</sup>X is ill-conditioned
 ---
 ### 13. RIDGE SOLUTION
 #### Modified Estimator
-- ŵ = (X<sup>T</sup>X + λI)<sup>−1</sup>X<sup>T</sup>y
+- ŵ = (X<sup>T</sup>X+λI)<sup>−1</sup>X<sup>T</sup>y
 #### Effect
 - Improves conditioning of matrix
 ---
@@ -117,13 +117,13 @@
 ---
 ### 16. POSTERIOR
 #### Expression
-- P(w | data) ∝ likelihood × prior
+- P(w|data) ∝ likelihood × prior
 #### MAP Estimation
-- ŵ<sub>MAP</sub> = argmax P(w | data)
+- ŵ<sub>MAP</sub> = argmax P(w|data)
 ---
 ### 17. MAP OBJECTIVE
 #### Equivalent Form (Page 3)
-- min Σ (w<sup>T</sup>xᵢ − yᵢ)² + (σ²/γ²) ||w||²
+- min Σ (w<sup>T</sup>xᵢ−yᵢ)² + (σ²/γ²) ||w||²
 #### Insight
 - Same as ridge regression
 ---

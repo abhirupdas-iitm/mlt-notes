@@ -2,7 +2,7 @@
 ### 1. CLASSIFICATION RECAP
 #### Goal
 - Learn:
-  h : ℝᵈ → {−1, +1}
+  h : ℝᵈ→{−1, +1}
 #### Two Approaches
 - Generative → Naive Bayes, Gaussian
 - Discriminative → Perceptron, Logistic Regression
@@ -15,7 +15,7 @@
 ---
 ### 3. LIMITATION
 #### Hard Decision
-- P(y=1|x) = 1 if w<sup>T</sup>x ≥ 0, else 0
+- P(y=1|x)=1 if w<sup>T</sup>x ≥ 0, else 0
 #### Issue
 - No notion of probability
 ---
@@ -30,7 +30,7 @@
 - If correctly classified:
   sign(w<sup>T</sup>xᵢ) = yᵢ → do nothing
 - Else (mistake):
-  w ← w + yᵢ xᵢ
+  w←w+yᵢ xᵢ
 ---
 ### 5. UPDATE INTERPRETATION
 #### Insight (Page 2)
@@ -43,32 +43,32 @@
 #### Definition
 - Dataset is separable if:
   ∃ w such that:
-  yᵢ (w<sup>T</sup>xᵢ) > 0 ∀ i
+  yᵢ(w<sup>T</sup>xᵢ)>0 ∀ i
 ---
 ### 7. MARGIN
 #### Definition (Page 4)
 - Dataset has margin γ if:
-  yᵢ (w<sup>T</sup>xᵢ) ≥ γ
+  yᵢ(w<sup>T</sup>xᵢ)≥γ
 #### Meaning
 - Distance from boundary
 ---
 ### 8. RADIUS ASSUMPTION
 #### Definition
-- ||xᵢ|| ≤ R for all i
+- ||xᵢ||≤R for all i
 ---
 ### 9. PERCEPTRON MISTAKE ANALYSIS
 #### Key Observations
 - Update occurs only on mistakes
 - After k updates:
-  w<sup>k</sup> = Σ yᵢ xᵢ
+  w<sup>k</sup>=Σyᵢxᵢ
 ---
 ### 10. NORM BOUND
 #### Result (Page 5)
-- ||w<sup>k</sup>||² ≤ k R²
+- ||w<sup>k</sup>||²≤kR²
 ---
 ### 11. PROGRESS TOWARD TRUE w*
 #### Result (Page 6)
-- w<sup>k</sup> · w* ≥ k γ
+- w<sup>k</sup>·w*≥kγ
 ---
 ### 12. COMBINING RESULTS
 #### Using Cauchy-Schwarz
@@ -76,7 +76,7 @@
 ---
 ### 13. FINAL BOUND
 #### Result (Page 6)
-- k ≤ R² / γ²
+- k≤R²/γ²
 #### Interpretation
 - Number of mistakes is bounded
 ---
@@ -93,21 +93,21 @@
 ### 16. LOGISTIC REGRESSION
 #### Model
 - Define:
-  z = w<sup>T</sup>x
+  z=w<sup>T</sup>x
 #### Probability
 - P(y=1|x) = g(z)
 ---
 ### 17. SIGMOID FUNCTION
 #### Definition (Page 2)
-- g(z) = 1 / (1 + e<sup>−z</sup>)
+- g(z) = 1 / (1+e<sup>−z</sup>)
 #### Properties
-- g(0) = 0.5
-- g(z) → 1 as z → ∞
-- g(z) → 0 as z → −∞
+- g(0)=0.5
+- g(z)→1 as z→∞
+- g(z)→0 as z→−∞
 ---
 ### 18. LOGISTIC MODEL
 #### Final Form
-- P(y=1|x) = 1 / (1 + e<sup>−w<sup>T</sup>x</sup>)
+- P(y=1|x) = 1 / (1+e<sup>−w<sup>T</sup>x</sup>)
 ---
 ### 19. MAXIMUM LIKELIHOOD
 #### Likelihood
@@ -115,7 +115,7 @@
 ---
 ### 20. LOG-LIKELIHOOD
 #### Expression (Page 2)
-- log L(w) = Σ [ yᵢ log g(w<sup>T</sup>xᵢ) + (1−yᵢ) log(1 − g(w<sup>T</sup>xᵢ)) ]
+- log L(w) = Σ [yᵢ log g(w<sup>T</sup>xᵢ) + (1−yᵢ) log(1 − g(w<sup>T</sup>xᵢ))]
 ---
 ### 21. OPTIMIZATION
 #### Goal
@@ -127,11 +127,11 @@
 ---
 ### 22. GRADIENT
 #### Result (Page 3)
-- ∇ = Σ xᵢ (yᵢ − g(w<sup>T</sup>xᵢ))
+- ∇ = Σxᵢ(yᵢ−g(w<sup>T</sup>xᵢ))
 ---
 ### 23. UPDATE RULE
 #### Gradient Ascent
-- w ← w + η Σ xᵢ (yᵢ − g(w<sup>T</sup>xᵢ))
+- w ← w+ηΣxᵢ(yᵢ−g(w<sup>T</sup>xᵢ))
 ---
 ### 24. INTERPRETATION
 #### Insight
@@ -145,7 +145,7 @@
 ---
 ### 26. KERNEL VERSION
 #### Insight (Page 3)
-- w = Σ αᵢ xᵢ
+- w=Σαᵢxᵢ
 #### Result
 - Kernel logistic regression
 ---
@@ -159,7 +159,7 @@
 ---
 ### MEMORY LINES
 #### Quick Recall
-- Perceptron: w ← w + yx
+- Perceptron: w←w+yx
 - Mistakes ≤ R²/γ²
 - g(z) = 1/(1+e⁻ᶻ)
 - ∇ = Σ xᵢ(yᵢ − g(wᵀxᵢ))

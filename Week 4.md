@@ -26,12 +26,12 @@
   - Identically distributed
 #### Implication
 - Joint probability:
-  P(x₁, ..., xₙ | θ) = ∏ P(xᵢ | θ)
+  P(x₁, ..., xₙ|θ) = ∏P(xᵢ|θ)
 ---
 ### 4. LIKELIHOOD FUNCTION
 #### Definition
 - Likelihood of parameter θ:
-  L(θ) = P(data | θ)
+  L(θ) = P(data|θ)
 #### For Bernoulli
 - L(p) = ∏ p^{xᵢ} (1−p)^{1−xᵢ}
 #### Log-Likelihood
@@ -42,7 +42,7 @@
 - Find parameter maximizing likelihood:
   θ̂<sub>ML</sub> = argmax L(θ)
 #### Result (Bernoulli)
-- p̂ = (1/n) Σ xᵢ
+- p̂ = (1/n)Σxᵢ
 #### Insight (Page 6)
 - Sample mean = MLE
 ---
@@ -50,7 +50,7 @@
 #### Model
 - xᵢ ~ N(μ, σ²)
 #### Likelihood
-- L(μ, σ²) = ∏ N(xᵢ | μ, σ²)
+- L(μ, σ²) = ∏N(xᵢ | μ, σ²)
 #### Result
 - μ̂ = (1/n) Σ xᵢ
 - σ̂² = (1/n) Σ (xᵢ − μ̂)²
@@ -84,16 +84,16 @@
 - Bernoulli likelihood
 - Prior: Beta(α, β)
 #### Posterior
-- Beta(α + Σ xᵢ, β + n − Σ xᵢ)
+- Beta(α+Σxᵢ,β+n−Σxᵢ)
 #### Insight
 - Prior acts like pseudo-counts
 ---
 ### 11. MAP ESTIMATION
 #### Definition
-- θ̂<sub>MAP</sub> = argmax P(θ | data)
+- θ̂<sub>MAP</sub> = argmax P(θ|data)
 #### Equivalent
 - Maximize:
-  log P(data | θ) + log P(θ)
+  log P(data|θ)+logP(θ)
 #### Insight
 - MLE + regularization
 ---
@@ -102,13 +102,13 @@
 - Single Gaussian cannot model complex data
 #### Idea
 - Data generated from mixture:
-  P(x) = Σ πₖ N(x | μₖ, σₖ²)
+  P(x) = ΣπₖN(x|μₖ,σₖ²)
 #### Parameters
 - πₖ (mixing weights)
 - μₖ (means)
 - σₖ² (variances)
 #### Constraint
-- Σ πₖ = 1
+- Σπₖ = 1
 ---
 ### 13. LATENT VARIABLES
 #### Hidden Variable
@@ -126,7 +126,7 @@
 ---
 ### 15. JENSEN’S INEQUALITY
 #### For concave function f:
-- f( Σ λₖ xₖ ) ≥ Σ λₖ f(xₖ)
+- f(Σλₖxₖ) ≥ Σλₖf(xₖ)
 #### Important Result
 - log is concave
 #### Use

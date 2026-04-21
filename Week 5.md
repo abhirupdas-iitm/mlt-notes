@@ -16,7 +16,7 @@
   f : ℝᵈ → ℝ
 #### Error Function
 - Squared error:
-  Error(f) = Σ (f(xᵢ) − yᵢ)²
+  Error(f) = Σ (f(xᵢ)−yᵢ)²
 #### Problem
 - Minimizing error → can overfit training data
 #### Solution
@@ -43,9 +43,9 @@
 #### Objective Function
 - f(w) = ||Xw − y||²
 #### Gradient
-- ∇f(w) = 2(X<sup>T</sup>X w − X<sup>T</sup>y)
+- ∇f(w) = 2(X<sup>T</sup>Xw − X<sup>T</sup>y)
 #### Update Rule
-- w<sup>t+1</sup> = w<sup>t</sup> − η ∇f(w<sup>t</sup>)
+- w<sup>t+1</sup> = w<sup>t</sup> − η∇f(w<sup>t</sup>)
 ---
 ### 6. COMPUTATIONAL ISSUE
 #### Problem
@@ -69,7 +69,7 @@ For t = 1,...,T:
 ### 8. SGD OUTPUT
 #### Final Estimate
 - Average iterates:
-  ŵ = (1/T) Σ w<sup>t</sup>
+  ŵ = (1/T)Σw<sup>t</sup>
 #### Property
 - Converges with high probability
 ---
@@ -90,16 +90,16 @@ For t = 1,...,T:
 ### 11. REPRESENTATION IN DATA SPACE
 #### Key Insight (Page 3)
 - Solution lies in span of data:
-  w* = X<sup>T</sup> α
+  w* = X<sup>T</sup>α
 #### Substitute into objective:
 - Leads to dual formulation
 ---
 ### 12. KERNEL REGRESSION
 #### Prediction
 - f(x) = w<sup>T</sup>φ(x)
-- = Σ αᵢ φ(xᵢ)<sup>T</sup> φ(x)
+- = Σ αᵢ φ(xᵢ)<sup>T</sup>φ(x)
 #### Using Kernel
-- K(xᵢ, x) = φ(xᵢ)<sup>T</sup> φ(x)
+- K(xᵢ, x) = φ(xᵢ)<sup>T</sup>φ(x)
 #### Final Form
 - f(x) = Σ αᵢ K(xᵢ, x)
 ---
@@ -111,7 +111,7 @@ For t = 1,...,T:
 ---
 ### 14. PROBABILISTIC VIEW OF LINEAR REGRESSION
 #### Model (Page 3)
-- y = w<sup>T</sup>x + ε
+- y = w<sup>T</sup>x+ε
 #### Noise
 - ε ~ N(0, σ²)
 ---
@@ -140,7 +140,7 @@ For t = 1,...,T:
 #### Quick Recall
 - f(x) = wᵀx
 - w* = (XᵀX)⁻¹Xᵀy
-- GD: w ← w − η∇f
+- GD: w←w−η∇f
 - SGD: sample + update
 - w = Xᵀα
 - f(x) = Σ αᵢ K(xᵢ, x)

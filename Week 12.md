@@ -1,10 +1,10 @@
 ## WEEK 12 — LOSS FUNCTIONS, UNIFICATION & INTRODUCTION TO NEURAL NETWORKS
 ### 1. GENERAL LEARNING FRAMEWORK
 #### Objective (Page 1)
-- min Σ L(wᵀxᵢ, yᵢ) + R(w)
+- minΣL(wᵀxᵢ, yᵢ)+R(w)
 Where:
-- L → loss function
-- R(w) → regularizer
+- L→loss function
+- R(w)→regularizer
 ---
 ### 2. CLASSIFICATION GOAL
 #### Setup
@@ -12,7 +12,7 @@ Where:
   {(x₁,y₁), ..., (xₙ,yₙ)}
 - yᵢ ∈ {−1, +1}
 #### Ideal Objective
-- min Σ 1(h(xᵢ) ≠ yᵢ)
+- minΣ1(h(xᵢ) ≠ yᵢ)
 #### Problem
 - NP-hard to optimize
 ---
@@ -24,17 +24,17 @@ Where:
 ---
 ### 4. COMMON LOSS FUNCTIONS
 #### (a) 0–1 Loss
-- L = 1(y wᵀx < 0)
+- L = 1(y wᵀx<0)
 #### Issue
 - Non-convex, hard to optimize
 #### (b) Squared Loss
-- L = (g(x) − y)²
+- L = (g(x)−y)²
 #### Used in
 - Regression
 #### (c) Hinge Loss (SVM)
-- L = max(0, 1 − y wᵀx)
+- L = max(0,1−y wᵀx)
 #### (d) Logistic Loss
-- L = log(1 + e<sup>−y wᵀx</sup>)
+- L = log(1+e<sup>−y wᵀx</sup>)
 #### (e) Exponential Loss (Boosting)
 - L = e<sup>−y h(x)</sup>
 ---
@@ -46,13 +46,13 @@ Where:
 ---
 ### 6. SVM REVISITED
 #### Objective
-- min (1/2)||w||² + C Σ max(0, 1 − y wᵀx)
+- min (1/2)||w||² + CΣmax(0, 1−y wᵀx)
 #### Interpretation
 - Regularization + hinge loss
 ---
 ### 7. LOGISTIC REGRESSION REVISITED
 #### Objective
-- min Σ log(1 + e<sup>−y wᵀx</sup>)
+- min Σ log(1+e<sup>−y wᵀx</sup>)
 #### Insight
 - Smooth approximation to 0–1 loss
 ---
@@ -78,7 +78,7 @@ Where:
 ### 11. NEURAL NETWORKS — INTRODUCTION
 #### Basic Model (Page 1)
 - Input:
-  x ∈ ℝᵈ
+  x∈ℝᵈ
 - Output:
   sign(wᵀx)
 #### Limitation
@@ -96,7 +96,7 @@ Where:
 ### 13. ACTIVATION FUNCTIONS
 #### Examples (Page 1)
 - Sigmoid:
-  a(z) = 1 / (1 + e<sup>−z</sup>)
+  a(z) = 1/(1+e<sup>−z</sup>)
 - ReLU:
   a(z) = max(0, z)
 ---
@@ -146,9 +146,9 @@ Where:
 ---
 ### MEMORY LINES
 #### Quick Recall
-- min Σ L + R(w)
-- Hinge: max(0, 1 − y wᵀx)
-- Logistic: log(1 + e⁻ʸʷᵀˣ)
+- minΣL+R(w)
+- Hinge: max(0, 1−y wᵀx)
+- Logistic: log(1+e⁻ʸʷᵀˣ)
 - Boosting: e⁻ʸʰˣ
 - NN = layered function
 - Backprop = chain rule

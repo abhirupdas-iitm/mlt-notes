@@ -91,7 +91,7 @@ Then:
 #### Goal
 - Find w<sub>2</sub> that maximizes variance of residuals
 #### Constraint
-- w<sub>2</sub><sup>T</sup> w<sub>1</sub> = 0
+- w<sub>2</sub><sup>T</sup>w<sub>1</sub> = 0
 #### Meaning
 - Orthogonal to first component
 ---
@@ -100,7 +100,7 @@ Then:
 - Find:
   w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>d</sub>
 #### Properties
-- w<sub>i</sub><sup>T</sup> w<sub>j</sub> = 0 (orthogonality)
+- w<sub>i</sub><sup>T</sup>w<sub>j</sub> = 0 (orthogonality)
 - ||w<sub>i</sub>|| = 1
 #### Result
 - Orthonormal basis
@@ -108,7 +108,7 @@ Then:
 ### 12. FULL RECONSTRUCTION
 #### Expression
 - Each data point:
-  x<sub>i</sub> = Σ (x<sub>i</sub><sup>T</sup>w<sub>k</sub>) w<sub>k</sub>
+  x<sub>i</sub> = Σ (x<sub>i</sub><sup>T</sup>w<sub>k</sub>)w<sub>k</sub>
 #### Insight (Page 16)
 - Data expressed in terms of principal components
 ---
@@ -116,7 +116,7 @@ Then:
 #### Idea
 - Keep only top k components
 #### Approximation
-- x<sub>i</sub> ≈ Σ<sub>k</sub> (x<sub>i</sub><sup>T</sup>w<sub>k</sub>) w<sub>k</sub>
+- x<sub>i</sub> ≈ Σ<sub>k</sub> (x<sub>i</sub><sup>T</sup>w<sub>k</sub>)w<sub>k</sub>
 #### Trade-off
 - Less dimensions ↔ some information loss
 ---
@@ -138,7 +138,7 @@ Then:
 ### 16. CENTERING DATA (IMPORTANT)
 #### Requirement
 - Mean of dataset must be zero:
-  (1/n) Σ x<sub>i</sub> = 0
+  (1/n)Σx<sub>i</sub> = 0
 #### Why
 - Ensures PCA captures variance correctly
 ---

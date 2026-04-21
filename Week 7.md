@@ -11,11 +11,11 @@
 ---
 ### 2. LOSS FUNCTION (0–1 LOSS)
 #### Definition
-- Loss(h) = (1/n) Σ 1(h(xᵢ) ≠ yᵢ)
+- Loss(h) = (1/n)Σ1(h(xᵢ)≠yᵢ)
 #### Indicator Function
-- 1(z) = 1 if z true, else 0
+- 1(z)=1 if z true, else 0
 #### Objective
-- min Σ 1(h(xᵢ) ≠ yᵢ)
+- minΣ1(h(xᵢ) ≠ yᵢ)
 #### Issue
 - NP-hard optimization problem
 ---
@@ -96,7 +96,7 @@
 ### 14. ENTROPY
 #### Definition (Page 5)
 - For binary labels:
-  H(p) = − [ p log p + (1−p) log(1−p) ]
+  H(p) = − [p log p + (1−p) log(1−p)]
 #### Interpretation
 - Measures uncertainty
 #### Properties
@@ -105,9 +105,9 @@
 ---
 ### 15. INFORMATION GAIN
 #### Definition
-- IG = H(D) − [ γ H(D<sub>yes</sub>) + (1−γ) H(D<sub>no</sub>) ]
+- IG = H(D)−[γ H(D<sub>yes</sub>) + (1−γ) H(D<sub>no</sub>)]
 Where:
-- γ = |D<sub>yes</sub>| / |D|
+- γ = |D<sub>yes</sub>|/|D|
 #### Goal
 - Maximize information gain
 ---

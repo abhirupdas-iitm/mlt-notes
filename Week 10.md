@@ -1,7 +1,7 @@
 ## WEEK 10 — SUPPORT VECTOR MACHINES (SVM), DUALITY & MAXIMUM MARGIN
 ### 1. REVISITING PERCEPTRON
 #### Key Result
-- Mistakes ≤ R² / γ²
+- Mistakes≤R²/γ²
 #### Insight
 - Performance depends on margin γ
 ---
@@ -14,33 +14,33 @@
 ### 3. LINEAR SEPARABILITY
 #### Assumption
 - ∃ w such that:
-  yᵢ (wᵀxᵢ) ≥ γ
+  yᵢ(wᵀxᵢ)≥γ
 ---
 ### 4. SCALING ISSUE
 #### Problem
 - If w works → cw also works
 #### Fix
 - Normalize:
-  yᵢ (wᵀxᵢ) ≥ 1
+  yᵢ(wᵀxᵢ)≥1
 ---
 ### 5. MARGIN DEFINITION
 #### Width of margin (Page 2)
-- width(w) = 2 / ||w||
+- width(w)=2/||w||
 #### Goal
 - Maximize margin
 ---
 ### 6. OPTIMIZATION PROBLEM
 #### Equivalent Form
-- max 2 / ||w||
+- max 2/||w||
 #### Convert to minimization:
-- min (1/2) ||w||²
+- min(1/2)||w||²
 #### Subject to:
-- yᵢ (wᵀxᵢ) ≥ 1
+- yᵢ(wᵀxᵢ)≥1
 ---
 ### 7. PRIMAL FORMULATION
 #### Final Problem
-- min (1/2) ||w||²  
-  s.t. yᵢ (wᵀxᵢ) ≥ 1 ∀ i
+- min(1/2)||w||²  
+  s.t. yᵢ (wᵀxᵢ)≥1 ∀ i
 ---
 ### 8. GENERAL CONSTRAINED OPTIMIZATION
 #### Form
@@ -49,26 +49,26 @@
 ---
 ### 9. LAGRANGIAN
 #### Definition (Page 4)
-- L(w, α) = f(w) + Σ αᵢ gᵢ(w)
+- L(w, α) = f(w)+Σαᵢgᵢ(w)
 #### αᵢ ≥ 0
 ---
 ### 10. SVM LAGRANGIAN
 #### For SVM
-- gᵢ(w) = 1 − yᵢ(wᵀxᵢ)
+- gᵢ(w) = 1−yᵢ(wᵀxᵢ)
 #### L(w, α) =
-- (1/2)||w||² + Σ αᵢ (1 − yᵢ wᵀxᵢ)
+- (1/2)||w||² + Σαᵢ(1−yᵢ wᵀxᵢ)
 ---
 ### 11. DUAL PROBLEM
 #### Idea
 - min over w → max over α
 #### Result (Page 6)
-- max Σ αᵢ − (1/2) Σ Σ αᵢαⱼ yᵢyⱼ (xᵢᵀxⱼ)
+- maxΣαᵢ−(1/2)ΣΣαᵢαⱼ yᵢyⱼ (xᵢᵀxⱼ)
 #### Subject to:
-- αᵢ ≥ 0
+- αᵢ≥0
 ---
 ### 12. REPRESENTATION OF w
 #### Key Result (Page 6)
-- w* = Σ αᵢ yᵢ xᵢ
+- w*=Σαᵢyᵢxᵢ
 #### Insight
 - w is linear combination of data points
 ---
@@ -81,7 +81,7 @@
 ---
 ### 14. COMPLEMENTARY SLACKNESS
 #### Condition (Page 8)
-- αᵢ [1 − yᵢ(wᵀxᵢ)] = 0
+- αᵢ [1−yᵢ(wᵀxᵢ)] = 0
 ---
 ### 15. INTERPRETATION
 #### If αᵢ > 0
@@ -91,7 +91,7 @@
 ---
 ### 16. SUPPORT VECTORS
 #### Definition (Page 9)
-- Points with αᵢ > 0
+- Points with αᵢ>0
 #### Insight
 - Only these points define w
 #### Key Idea
@@ -101,9 +101,9 @@
 #### Form
 - f(x) = wᵀx
 #### Substitute w:
-- f(x) = Σ αᵢ yᵢ (xᵢᵀx)
+- f(x) = Σαᵢyᵢ(xᵢᵀx)
 #### Kernel version:
-- f(x) = Σ αᵢ yᵢ K(xᵢ, x)
+- f(x) = ΣαᵢyᵢK(xᵢ, x)
 ---
 ### 18. GEOMETRIC INTERPRETATION
 #### Insight (Page 9)
@@ -113,20 +113,20 @@
 ### 19. LIMITATION — OUTLIERS
 #### Problem (Page 10)
 - Hard constraint:
-  yᵢ(wᵀxᵢ) ≥ 1
+  yᵢ(wᵀxᵢ)≥1
 - Not robust to noise
 ---
 ### 20. SOFT MARGIN SVM
 #### Idea
 - Allow violations
 #### Introduce slack variables:
-- ξᵢ ≥ 0
+- ξᵢ≥0
 ---
 ### 21. SOFT MARGIN OBJECTIVE
 #### Formulation
-- min (1/2)||w||² + C Σ ξᵢ
+- min(1/2)||w||² + CΣξᵢ
 #### Subject to:
-- yᵢ(wᵀxᵢ) ≥ 1 − ξᵢ
+- yᵢ(wᵀxᵢ)≥(1−ξᵢ)
 ---
 ### 22. ROLE OF C
 #### Interpretation

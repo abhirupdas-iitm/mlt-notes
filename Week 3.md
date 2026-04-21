@@ -6,7 +6,7 @@
 - Partition data into groups (clusters)
 #### Idea
 - Points in same cluster → similar
-- Points in different clusters → dissimilar :contentReference[oaicite:0]{index=0}
+- Points in different clusters → dissimilar
 ---
 ### 2. PROBLEM FORMULATION
 #### Input
@@ -17,12 +17,12 @@
   z₁, z₂, ..., zₙ where zᵢ ∈ {1, 2, ..., K}
 #### Cluster Means
 - For cluster k:
-  μₖ = (1 / |Cₖ|) Σ xᵢ  where i ∈ Cₖ
+  μₖ = (1/|Cₖ|)Σxᵢ  where i∈Cₖ
 ---
 ### 3. OBJECTIVE FUNCTION (K-MEANS)
 #### Goal
 Minimize total within-cluster variance:
-F(z₁, ..., zₙ) = Σ Σ ||xᵢ − μₖ||²  
+F(z₁, ..., zₙ) = ΣΣ||xᵢ − μₖ||²  
                        k     i ∈ Cₖ
 #### Interpretation
 - Minimize distance of points from their cluster centers
@@ -37,7 +37,7 @@ F(z₁, ..., zₙ) = Σ Σ ||xᵢ − μₖ||²
 Repeat until convergence:
 ##### Step 1: Compute Means
 - For each cluster k:
-  μₖ = (1 / |Cₖ|) Σ xᵢ
+  μₖ = (1/|Cₖ|)Σxᵢ
 ##### Step 2: Re-assignment
 - For each point xᵢ:
   zᵢ = argminₖ ||xᵢ − μₖ||²
@@ -66,7 +66,7 @@ Repeat until convergence:
 ### 7. NATURE OF CLUSTERS
 #### Observation (Pages 8–10)
 - Clusters are defined by:
-  ||x − μ₁||² ≤ ||x − μ₂||²
+  ||x−μ₁||²≤||x−μ₂||²
 #### Result
 - Decision boundary between clusters is:
   Linear (hyperplane)
@@ -120,7 +120,7 @@ Repeat until convergence:
 ### 13. GUARANTEE (K-MEANS++)
 #### Insight (Page 16)
 - Expected objective is bounded:
-  E[ Σ ||xᵢ − μₖ||² ] ≤ O(log K) × optimal
+  E[Σ||xᵢ − μₖ||²]≤O(log K) × optimal
 #### Meaning
 - Near-optimal solution in expectation
 ---
@@ -135,7 +135,7 @@ Repeat until convergence:
 #### Quick Recall
 - zᵢ = cluster assignment
 - μₖ = cluster mean
-- minimize Σ ||x − μ||²
+- minimize Σ ||x−μ||²
 - assignment + update loop
 - converges to local minimum
 ---

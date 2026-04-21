@@ -43,7 +43,7 @@
 1. Create datasets D₁, D₂, ..., Dₘ using bootstrap
 2. Train model h₁, h₂, ..., hₘ
 3. Aggregate predictions:
-   h(x) = sign( (1/m) Σ hᵢ(x) )
+   h(x) = sign((1/m)Σhᵢ(x))
 ---
 ### 7. WHY BAGGING WORKS
 #### Key Insight (Page 2)
@@ -55,7 +55,7 @@
 ### 8. IMPORTANT RESULT
 #### Probability (Page 3)
 - Probability a sample is included:
-  ≈ 1 − 1/e ≈ 0.63
+  ≈ 1−1/e ≈ 0.63
 #### Meaning
 - Each bootstrap dataset uses ~63% unique data
 ---
@@ -89,7 +89,7 @@
 ---
 ### 13. INITIALIZATION
 #### Weights
-- D₁(i) = 1/n
+- D₁(i)=1/n
 ---
 ### 14. ITERATIVE PROCESS
 For t = 1,...,T:
@@ -98,18 +98,18 @@ For t = 1,...,T:
 #### Step 2: Compute Error
 - εₜ = weighted error of hₜ
 #### Step 3: Compute Weight
-- αₜ = ln( (1 − εₜ) / εₜ )
+- αₜ = ln((1−εₜ)/εₜ )
 #### Step 4: Update Weights
 - If misclassified:
   Dₜ₊₁(i) ∝ Dₜ(i) e^{αₜ}
 - If correct:
   Dₜ₊₁(i) ∝ Dₜ(i) e^{−αₜ}
 #### Step 5: Normalize
-- Ensure Σ Dₜ₊₁(i) = 1
+- Ensure ΣDₜ₊₁(i) = 1
 ---
 ### 15. FINAL MODEL
 #### Prediction
-- h(x) = sign( Σ αₜ hₜ(x) )
+- h(x) = sign(Σαₜhₜ(x))
 ---
 ### 16. KEY INTUITION
 #### Insight (Page 4)

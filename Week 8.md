@@ -5,7 +5,7 @@
   P(x, y)
 #### Goal
 - Use Bayes rule to compute:
-  P(y | x)
+  P(y|x)
 #### Insight
 - Learn how data is generated
 ---
@@ -14,12 +14,12 @@
 - x ∈ {0,1}<sup>d</sup>
 - Each feature = presence/absence of word
 #### Model
-- P(x, y) = P(y) P(x | y)
+- P(x, y) = P(y)P(x | y)
 ---
 ### 3. PROBLEM — TOO MANY PARAMETERS
 #### Without Assumption
 - Need:
-  P(x | y) → 2<sup>d</sup> parameters
+  P(x|y) → 2<sup>d</sup> parameters
 #### Total parameters
 - ≈ 2<sup>d+1</sup>
 #### Issue
@@ -28,22 +28,22 @@
 ### 4. NAIVE BAYES ASSUMPTION
 #### Key Idea
 - Features are conditionally independent given label:
-  P(x | y) = ∏ P(x<sub>j</sub> | y)
+  P(x|y) = ∏P(x<sub>j</sub>|y)
 #### Result
 - Parameters reduce to:
-  2d + 1
+  2d+1
 #### Insight
 - Huge simplification
 ---
 ### 5. MODEL PARAMETERS
 #### Components
 - p = P(y = 1)
-- p<sub>j</sub><sup>(1)</sup> = P(x<sub>j</sub> = 1 | y = 1)
-- p<sub>j</sub><sup>(0)</sup> = P(x<sub>j</sub> = 1 | y = 0)
+- p<sub>j</sub><sup>(1)</sup>=P(x<sub>j</sub> = 1|y = 1)
+- p<sub>j</sub><sup>(0)</sup>=P(x<sub>j</sub> = 1|y = 0)
 ---
 ### 6. MAXIMUM LIKELIHOOD ESTIMATION
 #### Class Prior
-- p̂ = (1/n) Σ yᵢ
+- p̂ = (1/n)Σyᵢ
 #### Conditional Probabilities
 - p̂<sub>j</sub><sup>(y)</sup> =  
   (number of samples with x<sub>j</sub>=1 and y)  
@@ -55,17 +55,17 @@
 ### 7. PREDICTION USING BAYES RULE
 #### Decision Rule
 - Predict y = 1 if:
-  P(y=1 | x) > P(y=0 | x)
+  P(y=1|x) > P(y=0|x)
 #### Using Bayes:
-- P(y | x) ∝ P(x | y) P(y)
+- P(y|x) ∝ P(x|y)P(y)
 ---
 ### 8. NAIVE BAYES CLASSIFIER
 #### Compute
-- P(x | y=1) = ∏ (p<sub>j</sub><sup>(1)</sup>)<sup>x<sub>j</sub></sup> (1−p<sub>j</sub><sup>(1)</sup>)<sup>(1−x<sub>j</sub>)</sup>
-- P(x | y=0) similarly
+- P(x|y=1) = ∏ (p<sub>j</sub><sup>(1)</sup>)<sup>x<sub>j</sub></sup> (1−p<sub>j</sub><sup>(1)</sup>)<sup>(1−x<sub>j</sub>)</sup>
+- P(x|y=0) similarly
 #### Final Decision
 - Compare:
-  P(x | y=1)p  vs  P(x | y=0)(1−p)
+  P(x|y=1)p  vs  P(x|y=0)(1−p)
 ---
 ### 9. ZERO PROBABILITY PROBLEM
 #### Issue (Page 3)
@@ -83,7 +83,7 @@
 - Products of many probabilities → numerical underflow
 #### Solution
 - Take log:
-  log P(y=1 | x) / P(y=0 | x)
+  log P(y=1|x) / P(y=0|x)
 ---
 ### 12. LINEAR DECISION FUNCTION
 #### Result (Page 4)
@@ -123,7 +123,7 @@ Where:
 ### 16. LINEAR DECISION BOUNDARY
 #### When Σ is same (Page 6)
 - Decision rule simplifies to:
-  w<sup>T</sup>x + b ≥ 0
+  w<sup>T</sup>x+b≥0
 #### Insight
 - Linear separator
 ---
