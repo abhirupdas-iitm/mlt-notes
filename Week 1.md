@@ -8,7 +8,7 @@
 - Data points → vectors in ℝ<sup>d</sup>
 - Find a better **representation** of data
 #### Running Theme
-- Compress / represent data efficiently while preserving information :contentReference[oaicite:0]{index=0}
+- Compress / represent data efficiently while preserving information
 ---
 ### 2. PROBLEM FORMULATION
 #### Input
